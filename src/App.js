@@ -13,8 +13,8 @@ function App() {
         {/* format for route Route path = "/URLNAME" element = {<COMPONENT  stateIfNeeded ={stateIfNeeded}/>} /> */}
         <Route path="/" />
         <Route path ="main" element={<Main/>}/>
-        <Route path = "main/:id" element={<Contact />}/>
-        <Route path = "intro" element= {<Intro />}/>
+        {/* <Route path = "main/:id" element={<Contact />}/>
+        <Route path = "intro" element= {<Intro />}/> */}
       </Routes>
 
      <div className="App">
@@ -24,6 +24,8 @@ function App() {
        <Footer/>
       
      </div>
+
+
     </BrowserRouter>
   );
 }

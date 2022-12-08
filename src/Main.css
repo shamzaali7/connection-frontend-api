@@ -1,0 +1,32 @@
+.postItBoard {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.postIt {
+    background-color: rgb(246, 246, 181);
+    color: black;
+    height: 130px;
+    width: 130px;
+    padding: 5px;
+    margin: 15px;
+    box-shadow: 5px 5px 5px rgba(45, 45, 45, 0.6);
+    transform: rotate(-3deg);
+}
+
+.postIt:nth-child(odd) {
+    transform: rotate(2deg);
+    position: relative;
+    top: 2px;
+}
+
+.postIt:hover {
+    transform: scale(1.5);
+    position: relative;
+    z-index: 2;
+
+}
