@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react';
 import './App.css';
@@ -28,12 +28,12 @@ function App() {
      <div className="App">
        <Header/>
         <Nav/>
+
         {loggedOut ? 
           <Login setLoggedOut={setLoggedOut} /> 
           : <Main />
         }
 
-       {/* <Main/> */}
        <Footer/>
       
      </div>
