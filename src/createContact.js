@@ -62,7 +62,8 @@ export default function Create() {
 
     return (
         <div>
-            <Button onClick={handleOpen}><h1>New Contact</h1></Button>
+            <h1>New Contact</h1>
+            <Button onClick={handleOpen}>new</Button>
             <Modal
         open={open}
         onClose={handleClose}
