@@ -3,19 +3,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
 }
 
 .postIt {
     background-color: rgb(246, 246, 181);
     color: black;
-    height: 130px;
-    width: 130px;
+    height: 10em;
+    width: 10em;
     padding: 5px;
     margin: 15px;
     box-shadow: 5px 5px 5px rgba(45, 45, 45, 0.6);
     transform: rotate(-3deg);
+    
 }
 
 .postIt:nth-child(odd) {
@@ -29,4 +28,22 @@
     position: relative;
     z-index: 2;
 
+}
+
+.name {
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+}
+
+.postItNotes {
+    font-size: small;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+   
+}
+
+a {
+    text-decoration: none;
+    color: rgb(138, 228, 3);
 }

@@ -21,7 +21,7 @@ return (
   const [loading, setLoading] = useState(false)
   const getContacts = {
      method: 'GET',
-    url: 'http://localhost:4000/api/contact'
+    url: 'https://connection-backend-api.herokuapp.com/api/contact'
   }
 
   useEffect(()=> {
@@ -41,9 +41,14 @@ return (
                 console.log(contact)
                 return (
                   <div key={contact._id} className="postIt" id={contact._id}>
-                  <p>{contact.name} <br/> Connection Notes:<br/>{contact.connection}<br/>
-                  {contact.email} <br/> {contact.github}{contact.linkedIn}</p>
-                  <Link to={"/main/" + contact.id}><button>Edit</button></Link> 
+                  <p className="name">{contact.name}</p> 
+                  <p className="postItNotes"> Connection Notes:<br/>
+                  {contact.connection}<br/>
+                  {contact.email} <br/>
+                  <a href={contact.github}>GH</a>
+                  <a href={contact.linkedIn}>/in</a>
+                  </p>
+                  <Link to={"/main/" + contact._id}><button>Edit</button></Link> 
                   </div>
                 )
             })}

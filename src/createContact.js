@@ -22,7 +22,7 @@ export default function Create() {
 
         const newContact = {...form};
 
-        await fetch("http://localhost:4000/api/contact", {
+        await fetch("https://connection-backend-api.herokuapp.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
