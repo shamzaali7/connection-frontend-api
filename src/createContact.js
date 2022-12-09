@@ -1,6 +1,5 @@
 import React, {useState } from 'react';
 import { useNavigate } from "react-router";
-
 export default function Create() {
     const [form, setForm] = useState({
         name: "",
@@ -23,7 +22,7 @@ export default function Create() {
 
         const newContact = {...form};
 
-        await axios("url to back end", {
+        await fetch("url to back end", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
