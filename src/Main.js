@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import './Main.css';
 import './data.json';
+import Create from './createContact'
 
 
 const Main = () => {
@@ -31,7 +32,7 @@ const Main = () => {
 
       return (
           <div className="postItBoard">
-            <div className="postIt">+</div>
+            <div className="postIt"><button><Create/></button></div>
             {loading && 
                 contacts.map((contact) => {
                 console.log(contact)
