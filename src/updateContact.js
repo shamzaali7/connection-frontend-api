@@ -21,7 +21,7 @@ export default function Update() {
 
     async function handleDelete () {
         e.preventDefault()
-        await fetch('../data.json ${params.id}`, {
+        await fetch(`http://localhost:4000/api/contact${params.id}`, {
            method: "DELETE",
            headers: {
              'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ export default function Update() {
               linkedIn: form.linkedIn,
             };
 
-            await fetch(`../data.json/${params.id}`, {
+            await fetch(`http://localhost:4000/api/contact${params.id}`, {
                 method: "PATCH",
                 body: JSON.stringify(editedContact),
                 headers: {
@@ -56,51 +56,51 @@ export default function Update() {
                 <div>
                   <p >Update Contact</p>
                   <form onSubmit={onSubmit}>
-                    <div className="form-group">
+                    
+                    <div className="form-item">
                       <label htmlFor="Name">Name: </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="name"
-                        value={form.name}
-                        onChange={(e) => updateForm({ name: e.target.value })}
-                      />
+                      <input type="text" className="form-input" id="name" value={form.name}
+                        onChange={(e) => updateForm({ name: e.target.value })} />
                     </div>
-                    <div className="form-group">
+                    
+                    <div className="form-item">
                       <label htmlFor="Connection">Connection: </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-input"
                         id="connection"
                         value={form.connection}
                         onChange={(e) => updateForm({ connection: e.target.value })}
                       />
                     </div>
-                    <div className="form-group">
+                    
+                    <div className="form-item">
                       <label htmlFor="email">Email: </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-input"
                         id="email"
                         value={form.email}
                         onChange={(e) => updateForm({ email: e.target.value })}
                       />
                     </div>
-                    <div className="form-group">
+                    
+                    <div className="form-item">
                       <label htmlFor="github">Github: </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-input"
                         id="github"
                         value={form.github}
                         onChange={(e) => updateForm({ github: e.target.value })}
                       />
                     </div>
-                    <div className="form-group">
+                 
+                    <div className="form-item">
                       <label htmlFor="linkedIn">LinkedIn: </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-input"
                         id="linkedIn"
                         value={form.linkedIn}
                         onChange={(e) => updateForm({ LinkedIn: e.target.value })}
@@ -109,21 +109,24 @@ export default function Update() {
               
                     <br />
               
-                    <div className="form-group">
+                    <div className="form-item">
                       <input
                         type="submit"
-                        value="Update Burger"
-                        className="pointerTwo"
+                        value="Update Contact"
+                        className="submitBtn"
                       />
                     </div>
              
-                    <div className="delete">
+                    <div className="form-item">
                              
                              <button  onClick={handleDelete}>Delete</button> 
                              
                              
                      </div>
                   </form>
+                  </div>
+            )
+                  
 
 
             

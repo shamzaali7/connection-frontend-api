@@ -22,7 +22,7 @@ export default function Create() {
 
         const newContact = {...form};
 
-        await fetch("url to back end", {
+        await fetch("http://localhost:4000/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
