@@ -4,23 +4,11 @@ import axios from 'axios';
 import './App.css';
 import './Main.css';
 import './data.json';
-import MyModal from './Modal.js';
-
-import MyModal from './Modal.js';
-
-
 
 
 const Main = () => {
 
-return (
-  <div className="postItBoard">
-    <div className="postIt"><MyModal><button /></MyModal></div>
-    <div className="postIt"></div>
-    <div className="postIt"></div>
-  </div>
-  
-)
+
   const [contacts, setContacts]= useState()
   const [loading, setLoading] = useState(false)
   const getContacts = {
