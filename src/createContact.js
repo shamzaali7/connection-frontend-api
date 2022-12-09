@@ -48,7 +48,7 @@ export default function Create() {
                 </div>
                 <div>
                     <label htmlFor='connection'>Connection:</label>
-                    <input type="text" className="formInput" value={form.connection} onChange={(e) => updateForm({ collection: e.target.value})} />
+                    <input type="text" className="formInput" value={form.connection} onChange={(e) => updateForm({ connection: e.target.value})} />
                 </div>
                 <div>
                     <label htmlFor='email'>Email:</label>
