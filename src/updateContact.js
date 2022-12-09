@@ -4,10 +4,10 @@ import { useParams, useNavigate } from "react-router";
 export default function Update() {
     const [form, setForm] = useState({
         name: '',
-       connection: '',
-       email: '',
-       github: '',
-       linkedIn: '',
+        connection: '',
+        email: '',
+        gitHub: '',
+        linkedIn: '',
     });
 
     const params = useParams();
@@ -21,11 +21,14 @@ export default function Update() {
 
     async function handleDelete () {
         e.preventDefault()
-        await fetch(`https://connection-backend-api.herokuapp.com/api/contact${params.id}`, {
+        await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
            method: "DELETE",
            headers: {
              'Content-Type': 'application/json'
            },
+           body:{
+              id : params.id
+           }
          });
  
          navigate("/");
@@ -37,16 +40,24 @@ export default function Update() {
               name: form.name,
               connetion: form.connection,
               email: form.email,
-              github: form.github,
+              gitHub: form.gitHub,
               linkedIn: form.linkedIn,
             };
 
-            await fetch(`https://connection-backend-api.herokuapp.com/api/contact${params.id}`, {
+            await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
                 method: "PATCH",
-                body: JSON.stringify(editedContact),
                 headers: {
                   'Content-Type': 'application/json'
                 },
+                body: {
+                  id : params.id,
+                  name: editedContact.name,
+                  connection: editedContact.connection,
+                  email: editedContact.email, 
+                  gitHub: editedContact.gitHub,
+                  linkedIn: editedContact.linkedIn,
+                  links: editedContact.links
+                 }
               });
             
               navigate("/");
@@ -91,8 +102,8 @@ export default function Update() {
                         type="text"
                         className="form-input"
                         id="github"
-                        value={form.github}
-                        onChange={(e) => updateForm({ github: e.target.value })}
+                        value={form.gitHub}
+                        onChange={(e) => updateForm({ gitHub: e.target.value })}
                       />
                     </div>
                  
