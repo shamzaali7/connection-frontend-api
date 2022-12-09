@@ -21,7 +21,7 @@ export default function Update() {
 
     async function handleDelete () {
         e.preventDefault()
-        await fetch(`http://localhost:4000/api/contact${params.id}`, {
+        await fetch(`https://connection-backend-api.herokuapp.com/api/contact${params.id}`, {
            method: "DELETE",
            headers: {
              'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ export default function Update() {
               linkedIn: form.linkedIn,
             };
 
-            await fetch(`http://localhost:4000/api/contact${params.id}`, {
+            await fetch(`https://connection-backend-api.herokuapp.com/api/contact${params.id}`, {
                 method: "PATCH",
                 body: JSON.stringify(editedContact),
                 headers: {
