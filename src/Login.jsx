@@ -1,10 +1,14 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
 //when this is created it will need the following information incorporated
 const Login = ({ setLoggedOut }) => {
     return (
         <div>
-            <Link to='main'>
-                <p  onClick={() => setLoggedOut(false)}>see my contacts</p>
-            </Link>
+            <p>Welcome</p>
+           
+                <button onClick={() => setLoggedOut(false)}>changes logged out to false</button>
+            
         </div>
     )
 }
