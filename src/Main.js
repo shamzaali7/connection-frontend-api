@@ -6,9 +6,13 @@ import './Main.css';
 import './data.json';
 import MyModal from './Modal.js';
 
+import MyModal from './Modal.js';
+
+
 
 
 const Main = () => {
+
 return (
   <div className="postItBoard">
     <div className="postIt"><MyModal><button /></MyModal></div>
@@ -21,11 +25,13 @@ return (
   const [loading, setLoading] = useState(false)
   const getContacts = {
      method: 'GET',
+
     url: 'https://connection-backend-api.herokuapp.com/api/contact'
   }
 
   useEffect(()=> {
     axios.request(getContacts)
+
        .then(function(response) {
        setContacts(response.data);
        setLoading(true)
@@ -34,6 +40,7 @@ return (
        })
      }, [])
   
+
       return (
           <div className="postItBoard">
             {loading && 
