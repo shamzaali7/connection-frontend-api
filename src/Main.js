@@ -5,6 +5,7 @@ import './App.css';
 import './Main.css';
 import './data.json';
 import Create from './createContact'
+import Update from './updateContact'
 
 
 const Main = () => {
@@ -45,7 +46,7 @@ const Main = () => {
                   <a href={contact.github}>GH</a>
                   <a href={contact.linkedIn}>/in</a>
                   </p>
-                  <Link to={"/main/" + contact._id}><button>Edit</button></Link> 
+                  <Link to={"/main/" + contact._id}><Update><button>Edit</button></Update></Link> 
                   </div>
                 )
             })}
