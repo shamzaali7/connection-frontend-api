@@ -1,0 +1,16 @@
+[
+    {
+        "name": "person",
+        "connection": "idk random dude",
+        "email": "personRandomDude@gmail.com",
+        "github": "personRandomDude@github.com",
+        "linkedIn": "personRandomDude@linkedIn.com"
+    },
+    {
+        "name": "person2",
+        "connection": "idk random dude2",
+        "email": "personRandomDude2@gmail.com",
+        "github": "personRandomDude2@github.com",
+        "linkedIn": "personRandomDude2@linkedIn.com"
+    }
+]
