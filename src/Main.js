@@ -31,6 +31,7 @@ const Main = () => {
 
       return (
           <div className="postItBoard">
+            <div className="postIt">+</div>
             {loading && 
                 contacts.map((contact) => {
                 console.log(contact)
