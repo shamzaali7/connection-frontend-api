@@ -5,35 +5,41 @@ import './App.css';
 import './Main.css';
 import './data.json';
 import MyModal from './Modal.js';
+
 import MyModal from './Modal.js';
 
 
 
+
 const Main = () => {
-// return (
-//   <div className="postItBoard">
-//     <div className="postIt"></div>
-//     <div className="postIt"></div>
-//     <div className="postIt"></div>
-//   </div>
+
+return (
+  <div className="postItBoard">
+    <div className="postIt"><MyModal><button /></MyModal></div>
+    <div className="postIt"></div>
+    <div className="postIt"></div>
+  </div>
   
-// )
+)
   const [contacts, setContacts]= useState()
   const [loading, setLoading] = useState(false)
   const getContacts = {
-    method: 'GET',
+     method: 'GET',
+
     url: 'https://connection-backend-api.herokuapp.com/api/contact'
   }
 
   useEffect(()=> {
     axios.request(getContacts)
-      .then(function(response) {
-        setContacts(response.data);
-        setLoading(true)
+
+       .then(function(response) {
+       setContacts(response.data);
+       setLoading(true)
       } ).catch(function(error){
           console.error(error);
-      })
-    }, [])
+       })
+     }, [])
+  
 
       return (
           <div className="postItBoard">
