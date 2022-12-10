@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Intro from "./Intro"
 import './App.css'
 
@@ -7,7 +8,7 @@ const Header = () => {
     <div className="Header">
         <header>
             <h1>Our Connections</h1>
-            <Intro/>
+            <Link path ="./Intro" element= {<Intro />}>button</Link>
         </header>
     </div>
   )

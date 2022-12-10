@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react';
 import './App.css';
 import Header from './Header'
 import Main from './Main'
@@ -9,37 +8,30 @@ import Nav from './Nav'
 import Login from './Login'
 
 
-
-function App() {
-  const [loggedOut, setLoggedOut] = useState(true)
-
+  function App() {
+    const [loggedOut, setLoggedOut] = useState(true)
   return (
+    <div>
     <BrowserRouter>
       <Routes>
         {/* format for route Route path = "/URLNAME" element = {<COMPONENT  stateIfNeeded ={stateIfNeeded}/>} /> */}
         <Route path="/" />
-        <Route path ="main" element={<Main/> }/>
-         {/* <Route path = "main/:id" element={<Contact />}/>
+        <Route path ="main" element={<Main/>}/>
+        {/* <Route path = "main/:id" element={<Contact />}/>
         <Route path = "intro" element= {<Intro />}/> */}
       </Routes>
-
-     
-     
-     <div className="App">
-       <Header/>
-        <Nav/>
-
-        {loggedOut ? 
+      
+     <div className="login">
+      <Header/>
+     {loggedOut ? 
           <Login setLoggedOut={setLoggedOut} /> 
           : <Main />
         }
-
-       <Footer/>
-      
+      <Footer/>
      </div>
-
-
-    </BrowserRouter>
+     
+</BrowserRouter>
+</div>
   );
 }
 
