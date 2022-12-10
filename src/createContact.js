@@ -17,8 +17,7 @@ const style = {
     p: 4,
   };
 
-  
-export default function Create() {
+export default function Create({getNewContacts}) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -31,7 +30,7 @@ export default function Create() {
         linkedIn: "",
     });
 
-    const navigate =useNavigate();
+    const navigate = useNavigate();
 
     function updateForm(value) {
         return setForm((prev) => {
@@ -44,7 +43,7 @@ export default function Create() {
 
         const newContact = {...form};
 
-        await fetch("https://connection-backend-api.herokuapp.com/api/contact", {
+        await fetch("https://connection-backend-api.herokuapp.com/api/contact/", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
@@ -56,6 +55,7 @@ export default function Create() {
             return;
         });
 
+        getNewContacts();
         setForm({ name: "", connection: "", email: "", github: "", linkedIn: ""})
         navigate("/");
     }
@@ -65,11 +65,11 @@ export default function Create() {
             <h1>New Contact</h1>
             <Button onClick={handleOpen}>Click here!</Button>
             <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description">
-          <Box sx={style}>
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description">
+            <Box sx={style}>
             <form onSubmit={onSubmit}>
                 <div>
                     <label htmlFor='name'>Name:</label>
@@ -96,7 +96,7 @@ export default function Create() {
                 </div>
             </form>
             </Box>
-        </Modal>
+            </Modal>
         </div>
     );
 }
