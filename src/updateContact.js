@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router";
+import { useParams, useNavigate, json } from "react-router";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
@@ -17,17 +17,17 @@ const style = {
   p: 4,
 };
 
-export default function Update() {
+export default function Update({contact}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
     const [form, setForm] = useState({
-        name: '',
-        connection: '',
-        email: '',
-        gitHub: '',
-        linkedIn: '',
+        name: contact.name,
+        connection: contact.connection,
+        email: contact.email,
+        gitHub: contact.gitHub,
+        linkedIn: contact.linkedIn,
     });
 
     const params = useParams();
@@ -41,7 +41,7 @@ export default function Update() {
 
     async function handleDelete (e) {
         e.preventDefault()
-        await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
+        await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
            method: "DELETE",
            headers: {
              'Content-Type': 'application/json'
@@ -58,26 +58,19 @@ export default function Update() {
             e.preventDefault();
             const editedContact = {
               name: form.name,
-              connetion: form.connection,
+              connection: form.connection,
               email: form.email,
               gitHub: form.gitHub,
               linkedIn: form.linkedIn,
             };
-
-            await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
+            // const newId = params.id
+            ;
+            await fetch(`https://connection-backend-api.herokuapp.com/api/contact/${params.id}`, {
                 method: "PATCH",
                 headers: {
                   'Content-Type': 'application/json'
                 },
-                body: {
-                  id : params.id,
-                  name: editedContact.name,
-                  connection: editedContact.connection,
-                  email: editedContact.email, 
-                  gitHub: editedContact.gitHub,
-                  linkedIn: editedContact.linkedIn,
-                  links: editedContact.links
-                 }
+                body: JSON.stringify(editedContact)
               });
             
               navigate("/");
@@ -153,22 +146,17 @@ export default function Update() {
                         type="submit"
                         value="Update Contact"
                         className="submitBtn"
+                        onClick={onSubmit}
                       />
                     </div>
              
-                    <div className="form-item">
-                             
+                    <div className="form-item">                            
                              <button  onClick={handleDelete}>Delete</button> 
-                             
-                             
                      </div>
                   </form>
                   </Box>
                   </Modal>
                   </div>
             )
-                  
-
-
-            
+      
 }

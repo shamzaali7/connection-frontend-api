@@ -15,25 +15,26 @@ const Main = () => {
   const [loading, setLoading] = useState(false)
   const getContacts = {
      method: 'GET',
-
-    url: 'https://connection-backend-api.herokuapp.com/api/contact'
+     url: 'https://connection-backend-api.herokuapp.com/api/contact'
   }
 
   useEffect(()=> {
-    axios.request(getContacts)
+        getNewContacts()
+     }, [])
 
+  function getNewContacts(){
+    axios.request(getContacts)
        .then(function(response) {
        setContacts(response.data);
        setLoading(true)
       } ).catch(function(error){
           console.error(error);
        })
-     }, [])
-  
+  }
 
       return (
           <div className="postItBoard">
-            <div className="postIt"><button><Create/></button></div>
+            <div className="postIt"><button><Create getNewContacts={getNewContacts}/></button></div>
             {loading && 
                 contacts.map((contact) => {
                 console.log(contact)
@@ -46,7 +47,7 @@ const Main = () => {
                   <a href={contact.github}>GH</a>
                   <a href={contact.linkedIn}>/in</a>
                   </p>
-                  <Link to={"/main/" + contact._id}><Update><button>Edit</button></Update></Link> 
+                  <Link to={`/` + contact._id}><Update contact={contact}><button>Edit</button></Update></Link> 
                   </div>
                 )
             })}

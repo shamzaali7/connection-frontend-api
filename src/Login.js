@@ -5,8 +5,6 @@ import {auth} from './Firebase-Config/config'
 import { Link } from 'react-router-dom';
 //when this is created it will need the following information incorporated
 
-  
-
 //when this is created it will need the following information incorporated
 const Login = ({ setLoggedOut }) => {
     //now we have to create some functions for firebase
