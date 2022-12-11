@@ -40,4 +40,4 @@ const firebaseConfig = {
 //one you choose, click Eneable and save 
 //now import 'firebase.auth' in imports at top of root file--line 23
 // now pass your authentication in code below but remember we want to export this into many different files so make sure to export
-export const auth = getAuth(app)
+export default app
