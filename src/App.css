@@ -12,16 +12,15 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+{/*--------------------Header.js css --------------------------*/}
 .Header {
-  background-color: #282c34;
- 
+  color:rgb(4, 5, 5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 .Intro {
   background-color: rgb(4, 5, 5);

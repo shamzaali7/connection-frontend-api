@@ -1,0 +1,80 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+
+}
+h1{
+
+}
+h3, h5, #submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.form-control {
+  
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+
+
+
+    
+
+}
+
+/* input{{
+    height: 3vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    -webkit-box-shadow: 3px 3px 15px 4px #000000; 
+box-shadow: 3px 3px 15px 4px #000000;
+border: 3px double rgba(28,110,164,0.55); */
+
+
+button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center ;
+    justify-content: center;
+    width: 1vw;
+    margin: 3px;
+
+ 
+
+}
+.myButton {
+    color: rgb(255, 255, 255); font-size: 14px; line-height: 20px; padding: 6px; border-radius: 15px; font-family: opendyslexic; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(135deg, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 37%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 3px 3px 15px 4px; border: 2px outset rgb(28, 110, 164); width: 5vw;display: inline-block;}
+    .myButton:hover {
+    background: #1C6EA4; }
+    .myButton:active {
+    background: #144E75; }
+
+#submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center ;
+    justify-content: center;
+    width: 5vw;
+}
+button:hover{
+    background-color: cornsilk;
+    color:#000000;
+    cursor: pointer;
+
+}
+   
+    

@@ -8,7 +8,7 @@ const Header = () => {
     <div className="Header">
         <header>
             <h1>Our Connections</h1>
-            <Link path ="./Intro" element= {<Intro />}>button</Link>
+            
         </header>
     </div>
   )
