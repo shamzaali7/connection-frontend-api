@@ -6,6 +6,10 @@ import './Main.css';
 import './data.json';
 import Create from './createContact'
 import Update from './updateContact'
+import { AiOutlineMail } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin } from 'react-icons/ai';
+
 
 
 const Main = () => {
@@ -39,16 +43,27 @@ const Main = () => {
                 contacts.map((contact) => {
                 console.log(contact)
                 return (
+                  
                   <div key={contact._id} className="postIt" id={contact._id}>
-                  <p className="name">{contact.name}</p> 
-                  <p className="postItNotes"> Connection Notes:<br/>
-                  {contact.connection}<br/>
-                  {contact.email} <br/>
-                  <a href={contact.github}>GH</a>
-                  <a href={contact.linkedIn}>/in</a>
-                  </p>
+                    
+                  <header1 className="name">{contact.name}</header1> 
+                  <form className="postItNotes">
+                  <div>
+                  <h4>Connection Notes:</h4>
+                  <box>{contact.connection}</box>
+                  </div></form>
+                  <form>
+                  <box>
+                  <a href={contact.email}><AiOutlineMail color="black" fontSize="2em" /></a>
+                  <a href={contact.github}><AiFillGithub color="black" fontSize="2em" /></a>
+                  <a href={contact.linkedIn}><AiFillLinkedin color="black" fontSize="2em" /></a>
+                  </box>
+                  
+                  </form>
                   <Link to={`/` + contact._id}><Update contact={contact}><button>Edit</button></Update></Link> 
+                 
                   </div>
+                  
                 )
             })}
           </div>

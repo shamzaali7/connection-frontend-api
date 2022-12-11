@@ -79,14 +79,14 @@ export default function Update({contact}) {
             return (
                 <div>
                   <p>Update Contact</p>
-                  <Button onClick={handleOpen}>x</Button>
+                  <Button onClick={handleOpen}>Update</Button>
             <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">
           <Box sx={style}>
-          <Button onClick={handleClose}>x</Button>
+          <Button onClick={handleClose}>close</Button>
                   <form onSubmit={onSubmit}>
                     
                     <div className="form-item">
