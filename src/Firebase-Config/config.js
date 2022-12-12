@@ -18,7 +18,20 @@
 // the following code need to be hidden by envirement varibles dont publish without hiding  
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth' 
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import {
+  getFirestore,
+  query,
+  getDocs,
+  collection,
+  where,
+  addDoc,
+} from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
@@ -32,7 +45,43 @@ const firebaseConfig = {
   };
 //   now write this code 
  
-  const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const googleProvider = new GoogleAuthProvider();
+
+const signInWithGoogle = async () => {
+  try {
+    const res = await signInWithPopup(auth, googleProvider);
+    const user = res.user;
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
+     
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+
+const logout = () => {
+  signOut(auth);
+};
+
+export {
+  auth,
+  db,
+  signInWithGoogle,
+  logout,
+};
 
 //   Now go back to you firebase main screen and click on authentication
 // click on sign in method
@@ -40,4 +89,4 @@ const firebaseConfig = {
 //one you choose, click Eneable and save 
 //now import 'firebase.auth' in imports at top of root file--line 23
 // now pass your authentication in code below but remember we want to export this into many different files so make sure to export
-export default app
+
