@@ -6,9 +6,12 @@ import Main from './Main'
 import Footer from './Footer'
 import Nav from './Nav'
 import Login from './Login'
+import Update from'./updateContact'
 
   function App() {
     const [loggedOut, setLoggedOut] = useState(true)
+   const [contact, setContact] = useState([])
+    
   return (
     <div className="app"> 
           <Header/>
@@ -20,9 +23,10 @@ import Login from './Login'
                 <Routes>
                   <Route exact path="/" element={<Login />} />
                   <Route exact path="/main" element={<Main />} />
-                 
+                  <Route path="/main/:id" element={<Update contact={contact}  />} />
                 </Routes>
                 <Nav/>
+               
               <Footer/>
             </Router>
     </div>
