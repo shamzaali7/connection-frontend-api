@@ -41,25 +41,20 @@ const Login = ({ setLoggedOut }) => {
         }, [user, loading]);
     
 
- return (
+
+
+return (
     <div>
+       <div className="login__container">
         <h2>Welcome</h2>
-       
-      
-        <div className="login__container">
         <button className="login__btn login__google" onClick={signInWithGoogle}>
         Login with Google</button>
         Logged in as
         <div>{name}</div>
         <div>{user?.email}</div>
-        <button onClick={() => setLoggedOut(false)}>changes logged out to false</button>
-        <div>
-        <Link to="/Main"></Link>
-    
       </div>
         </div> 
-    </div>
+   
             )
         }
-    
-export default Login;
+        export default Login;

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="Header">
         <header>
-            <h1>Our Connections</h1>
+            <h1>The Connections Keeper</h1>
             
         </header>
     </div>

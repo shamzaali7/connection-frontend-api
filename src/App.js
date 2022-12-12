@@ -7,20 +7,26 @@ import Footer from './Footer'
 import Nav from './Nav'
 import Login from './Login'
 
-   
- 
-    function App() {
-      return (
-        <div className="app">
+  function App() {
+    const [loggedOut, setLoggedOut] = useState(true)
+  return (
+    <div className="app"> 
           <Header/>
-          <Router>
-            <Routes>
-              <Route exact path="/" element={<Login />} />
-              <Route exact path="/main" element={<Main />} />
-            </Routes>
-          </Router>
-          <Footer/>
-        </div>
-      );
-    }
- export default App;
+            <Router>
+            {/* <button>
+              <Login onClick={() => setLoggedOut(false)} setLoggedOut={setLoggedOut} exact path="/main"></Login>
+              </button> */}
+             
+                <Routes>
+                  <Route exact path="/" element={<Login />} />
+                  <Route exact path="/main" element={<Main />} />
+                 
+                </Routes>
+                <Nav/>
+              <Footer/>
+            </Router>
+    </div>
+  );
+}
+
+export default App;

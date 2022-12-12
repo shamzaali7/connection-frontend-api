@@ -2,11 +2,10 @@
 a {
     color: inherit;
 }
-.item1 {
+.item1{
     border: none;
     background-color: inherit;
     color: #6bd1f0;
-  
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -20,9 +19,8 @@ a {
     outline: 0;
 }
 .item2 {
-    background: rgba(49, 49, 54, 0.993);
+    background-color:rgba(49, 49, 54, 0.993);
     color: rgb(190, 190, 190);
- 
     font-size: 15px;
     display: flex;
     justify-content: center;
@@ -41,12 +39,12 @@ container{
 .footer-container {
     color: aliceblue;
     text-align: center;
-    background-color: rgba(49, 49, 54, 0.993);
+    background-color:rgba(49, 49, 54, 0.993);
     font-size: 15px;
     width: 100%;
     height: 4rem;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
     align-items: center;
 }
 

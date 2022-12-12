@@ -44,8 +44,8 @@
     flex-direction: wrap;
     font-size: medium;
     text-align: center;
-    /* font-family:'Courier New', Courier, monospace; */
-    font-family: 'Poppins', sans-serif;
+    font-family:'Courier New', Courier, monospace;
+    /* font-family: 'Poppins', sans-serif; */
     color: black;
 }
 
@@ -54,8 +54,9 @@
     flex-shrink: inherit;
     flex-basis: auto;
     font-size: small;
-    font-family: 'Poppins', sans-serif;
-    /* font-family:'Courier New', Courier, monospace; */
+    /* font-family: 'Poppins', sans-serif; */
+    
+    font-family:'Courier New', Courier, monospace;
     color: black;
     margin: 0 auto;
    
@@ -74,7 +75,14 @@ header1{
     color: white;
     text-align: center;
     place-content: center;
-    background-color: grey;
+    background-color:rgba(49, 49, 54, 0.993);
+    height: 5vh;
+    align-items: center;
+    opacity: 90%;
+    
+}
+.name{
+    color: rgb(190, 190, 190);
 }
 h4{
     place-content: center;

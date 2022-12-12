@@ -2,16 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 {/*--------------------Header.js css --------------------------*/}
 .Header {
   color:rgb(4, 5, 5);
@@ -19,20 +9,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
+  background: rgba(49, 49, 54, 0.993);
+  color: rgb(190, 190, 190);
   
+
 }
 .Intro {
   background-color: rgb(4, 5, 5);
   display: flex;
   align-items: flex-end;
-  
-
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -56,4 +43,16 @@ Footer{
     width: 100%;
     height: 4rem;
 
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+             
+}
+Login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  margin-bottom: 40vh ;
 }
