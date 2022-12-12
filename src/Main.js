@@ -61,7 +61,8 @@ const Main = () => {
                   </box>
                   
                   </form>
-                  <Update contact={contact}><button>Edit</button></Update> 
+                  <p ><Link to={'/main/' + contact._id}><button>Edit</button></Link></p>
+                  {/* <Update contact={contact}><button>Edit</button></Update>  */}
                  
                   </div>
                   
