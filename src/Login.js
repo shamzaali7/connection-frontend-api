@@ -32,7 +32,7 @@ const Login = ({ setLoggedOut }) => {
       
         useEffect(() => {
           if (loading) return;
-          if (!user) return navigate("/main");
+          if (!user) return navigate("/");
           if (true === user?.uid){
             return navigate("/main")
           }
