@@ -64,9 +64,9 @@ export default function Update({contact}) {
           // const newId = params.id
           ;
           await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
-              method: "PATCH",
+              method: "PUT",
               headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
               },
               body: JSON.stringify(editedContact)
             });
@@ -144,7 +144,7 @@ export default function Update({contact}) {
                         type="submit"
                         value="Update Contact"
                         className="submitBtn"
-                        onClick={onSubmit}
+                        onChange={onSubmit}
                       />
                     </div>
              

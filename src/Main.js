@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Box from '@mui/material/Box';
 import './App.css';
 import './Main.css';
 import './data.json';
@@ -50,7 +51,7 @@ const Main = () => {
                   <form className="postItNotes">
                   <div>
                   <h4>Connection Notes:</h4>
-                  <box>{contact.connection}</box>
+                  <Box>{contact.connection}</Box>
                   </div></form>
                   <form>
                   <box>
