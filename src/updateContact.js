@@ -40,41 +40,39 @@ export default function Update({contact}) {
     }
 
     async function handleDelete (e) {
-        e.preventDefault()
-        await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
-           method: "DELETE",
-           headers: {
-             'Content-Type': 'application/json'
-           },
-           body:{
-              id : params.id
-           }
-         });
- 
-         navigate("/");
-        } 
+      e.preventDefault()
+      await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
+         method: "DELETE",
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({id : params.id})
+       });
+       navigate("/");
+      } 
 
-        async function onSubmit(e) {
-            e.preventDefault();
-            const editedContact = {
-              name: form.name,
-              connection: form.connection,
-              email: form.email,
-              gitHub: form.gitHub,
-              linkedIn: form.linkedIn,
-            };
-            // const newId = params.id
-            ;
-            await fetch(`https://connection-backend-api.herokuapp.com/api/contact/${params.id}`, {
-                method: "PATCH",
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(editedContact)
-              });
-            
-              navigate("/");
-            }
+      async function onSubmit(e) {
+          e.preventDefault();
+          const editedContact = {
+            id: params.id,
+            name: form.name,
+            connection: form.connection,
+            email: form.email,
+            gitHub: form.gitHub,
+            linkedIn: form.linkedIn
+          };
+          // const newId = params.id
+          ;
+          await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
+              method: "PATCH",
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(editedContact)
+            });
+          
+            navigate("/");
+          }
 
             return (
                 <div>
