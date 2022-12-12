@@ -26,7 +26,7 @@ export default function Update({contact}) {
         name: contact.name,
         connection: contact.connection,
         email: contact.email,
-        gitHub: contact.gitHub,
+        github: contact.github,
         linkedIn: contact.linkedIn,
     });
 
@@ -41,14 +41,14 @@ export default function Update({contact}) {
 
     async function handleDelete (e) {
       e.preventDefault()
-      await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
+      await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
          method: "DELETE",
          headers: {
            'Content-Type': 'application/json'
          },
          body: JSON.stringify({id : params.id})
        });
-       navigate("/");
+       navigate("/main");
       } 
 
       async function onSubmit(e) {
@@ -58,12 +58,12 @@ export default function Update({contact}) {
             name: form.name,
             connection: form.connection,
             email: form.email,
-            gitHub: form.gitHub,
+            github: form.github,
             linkedIn: form.linkedIn
           };
           // const newId = params.id
           ;
-          await fetch(`https://connection-backend-api.herokuapp.com/api/contact/`, {
+          await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
               method: "PUT",
               headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function Update({contact}) {
               body: JSON.stringify(editedContact)
             });
           
-            navigate("/");
+            navigate("/main");
           }
 
             return (
@@ -121,8 +121,8 @@ export default function Update({contact}) {
                         type="text"
                         className="form-input"
                         id="github"
-                        value={form.gitHub}
-                        onChange={(e) => updateForm({ gitHub: e.target.value })}
+                        value={form.github}
+                        onChange={(e) => updateForm({ github: e.target.value })}
                       />
                     </div>
                  
