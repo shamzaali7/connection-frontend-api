@@ -60,7 +60,7 @@ const Main = () => {
                   </box>
                   
                   </form>
-                  <Link to={`/` + contact._id}><Update contact={contact}><button>Edit</button></Update></Link> 
+                  <Update contact={contact}><button>Edit</button></Update> 
                  
                   </div>
                   
