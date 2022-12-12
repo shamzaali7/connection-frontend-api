@@ -1,16 +1,12 @@
 
-import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth"
-
-
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js";
-
 import { useAuthState } from "react-firebase-hooks/auth";
-
 import { query, collection, getDocs, where } from "firebase/firestore";
+import './Login.css'
 
 //when this is created it will need the following information incorporated
 
@@ -47,15 +43,17 @@ const Login = ({ setLoggedOut }) => {
 
  return (
     <div>
-        <p>Welcome</p>
-            <button onClick={() => setLoggedOut(false)}>changes logged out to false</button>
-        <div>
-            <button className="login__btn login__google" onClick={signInWithGoogle}>
+        <h2>Welcome</h2>
+       
+      
+        <div className="login__container">
+        <button className="login__btn login__google" onClick={signInWithGoogle}>
         Login with Google</button>
-        <div className="dashboard__container">
         Logged in as
         <div>{name}</div>
         <div>{user?.email}</div>
+        <button onClick={() => setLoggedOut(false)}>changes logged out to false</button>
+        <div>
         <Link to="/Main"></Link>
     
       </div>
