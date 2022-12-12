@@ -48,7 +48,7 @@ const Login = ({ setLoggedOut }) => {
  return (
     <div>
         <p>Welcome</p>
-            <button onClick={() => setLoggedOut(true)}>changes logged out to false</button>
+            <button onClick={() => setLoggedOut(false)}>changes logged out to false</button>
         <div>
             <button className="login__btn login__google" onClick={signInWithGoogle}>
         Login with Google</button>
