@@ -9,11 +9,13 @@
     justify-content: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+   
 }
 
 .postIt {
     display: flex;
     flex-direction: column;
+    align-content: space-between;
     background-color: rgb(246, 246, 164);
     color: black;
     height: 15em;
@@ -98,3 +100,15 @@ box{
     margin: 0 auto;
 }
 
+.form-input {
+    padding: 3px;
+    margin: 3px;
+    box-shadow: 2px 2px 2px .4;
+
+}
+
+.form-item {
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+    
+}

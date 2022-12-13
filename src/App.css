@@ -56,3 +56,15 @@ Login{
   justify-content: center; 
   margin-bottom: 40vh ;
 }
+.formInput {
+  padding: 3px;
+  margin: 3px;
+  box-shadow: 2px 2px 2px .4;
+
+}
+
+.formItem {
+  font-size: medium;
+  font-family:'Courier New', Courier, monospace;
+  
+}
