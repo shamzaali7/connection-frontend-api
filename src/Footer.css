@@ -33,6 +33,7 @@ container{
     text-align: center;
     justify-content: center;
     display: flex;
+    margin: 0 auto;
 }
 
 
@@ -41,11 +42,12 @@ container{
     text-align: center;
     background-color:rgba(49, 49, 54, 0.993);
     font-size: 15px;
-    width: 100%;
+    width: 99%;
     height: 4rem;
     display: grid;
     grid-template-columns: 1fr  1fr 1fr 1fr;
     align-items: center;
+    
 }
 
 /* Extra small devices (phones, 600px and down) */
