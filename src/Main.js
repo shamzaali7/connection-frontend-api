@@ -57,7 +57,7 @@ const Main = () => {
                   <form>
                     <Box>
                       <div className="links-container">
-                        <div><a href={contact.email}><AiOutlineMail color="black" fontSize="2em" /></a></div>
+                        <div><a href={`mailto:${contact.email}`}><AiOutlineMail color="black" fontSize="2em" /></a></div>
                         <div><a href={contact.github}><AiFillGithub color="black" fontSize="2em" /></a></div>
                         <div><a href={contact.linkedIn}><AiFillLinkedin color="black" fontSize="2em" /></a></div>
                       </div>

@@ -138,8 +138,12 @@ export default function Update({contact}) {
                     <br />
               
                     <div className="formItem">
+                        {/* // type= "submit"
+                        // className="formInput"
+                      
                      
-                     <Button onclick= {onSubmit}>Update Contact</Button>
+                        // onChange={(e) => updateForm({ LinkedIn: e.target.value })} */}
+                     <Button onClick= {onSubmit}>Update Contact</Button>
                    
                     </div>
              

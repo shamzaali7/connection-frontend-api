@@ -53,11 +53,12 @@ export default function Create({getNewContacts}) {
             window.alert(error);
             return;
         });
-
+        setOpen(false)
         getNewContacts();
         setForm({ name: "", connection: "", email: "", github: "", linkedIn: ""})
-         return navigate("/main");
-        
+         return (
+            navigate("/main"))
+       
        
     }
 
@@ -93,7 +94,7 @@ export default function Create({getNewContacts}) {
                     <input type="text" className="formInput" value={form.linkedIn} onChange={(e) => updateForm({ linkedIn: e.target.value})} />
                 </div>
                 <div>
-                    <Button type="submit" onClick={(e) => handleClose()}>Create Contact</Button>
+                    <Button type="submit" onClick={(e)=>onSubmit()} >Create Contact</Button>
                   
                 </div>
             </form>
