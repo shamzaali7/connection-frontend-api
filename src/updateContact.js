@@ -76,61 +76,59 @@ export default function Update({contact}) {
 
             return (
                 <div>
-                  <p>Update Contact</p>
-                  <Button onClick={handleOpen}>Update</Button>
+            {setTimeout(handleOpen, 100)}    
             <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">
           <Box sx={style}>
-          <Button onClick={handleClose}>close</Button>
                   <form onSubmit={onSubmit}>
                     
-                    <div className="form-item">
-                      <label htmlFor="Name">Name: </label>
-                      <input type="text" className="form-input" id="name" value={form.name}
+                    <div className="formItem">
+                      <label>Name: </label>
+                      <input type="text" className="formInput" id="name" value={form.name}
                         onChange={(e) => updateForm({ name: e.target.value })} />
                     </div>
                     
-                    <div className="form-item">
+                    <div className="formItem">
                       <label htmlFor="Connection">Connection: </label>
                       <input
                         type="text"
-                        className="form-input"
+                        className="formInput"
                         id="connection"
                         value={form.connection}
                         onChange={(e) => updateForm({ connection: e.target.value })}
                       />
                     </div>
                     
-                    <div className="form-item">
+                    <div className="formItem">
                       <label htmlFor="email">Email: </label>
                       <input
                         type="text"
-                        className="form-input"
+                        className="formInput"
                         id="email"
                         value={form.email}
                         onChange={(e) => updateForm({ email: e.target.value })}
                       />
                     </div>
                     
-                    <div className="form-item">
+                    <div className="formItem">
                       <label htmlFor="github">Github: </label>
                       <input
                         type="text"
-                        className="form-input"
+                        className="formInput"
                         id="github"
                         value={form.github}
                         onChange={(e) => updateForm({ github: e.target.value })}
                       />
                     </div>
                  
-                    <div className="form-item">
+                    <div className="formItem">
                       <label htmlFor="linkedIn">LinkedIn: </label>
                       <input
                         type="text"
-                        className="form-input"
+                        className="formInput"
                         id="linkedIn"
                         value={form.linkedIn}
                         onChange={(e) => updateForm({ LinkedIn: e.target.value })}
@@ -139,17 +137,15 @@ export default function Update({contact}) {
               
                     <br />
               
-                    <div className="form-item">
-                      <input
-                        type="submit"
-                        value="Update Contact"
-                        className="submitBtn"
-                        onChange={onSubmit}
-                      />
+                    <div className="formItem">
+                     
+                     <Button onclick= {onSubmit}>Update Contact</Button>
+                   
                     </div>
              
-                    <div className="form-item">                            
-                             <button  onClick={handleDelete}>Delete</button> 
+                    <div className="formItem">                            
+                             <Button  onClick={handleDelete}>Delete</Button>
+                              <Button  onClick={(e) => navigate(-1)}>Cancel</Button> 
                      </div>
                   </form>
                   </Box>

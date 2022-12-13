@@ -57,7 +57,9 @@ export default function Create({getNewContacts}) {
 
         getNewContacts();
         setForm({ name: "", connection: "", email: "", github: "", linkedIn: ""})
-        navigate("/main");
+         return navigate("/main");
+        
+       
     }
 
     return (
@@ -71,28 +73,29 @@ export default function Create({getNewContacts}) {
                 aria-describedby="modal-modal-description">
             <Box sx={style}>
             <form onSubmit={onSubmit}>
-                <div>
+                <div className="formItem">
                     <label htmlFor='name'>Name:</label>
                     <input type="text" className="formInput" value={form.name} onChange={(e) => updateForm({ name: e.target.value})} />
                 </div>
-                <div>
+                <div className="formItem">
                     <label htmlFor='connection'>Connection:</label>
                     <input type="text" className="formInput" value={form.connection} onChange={(e) => updateForm({ connection: e.target.value})} />
                 </div>
-                <div>
+                <div className="formItem">
                     <label htmlFor='email'>Email:</label>
                     <input type="text" className="formInput" value={form.email} onChange={(e) => updateForm({ email: e.target.value})} />
                 </div>
-                <div>
+                <div className="formItem">
                     <label htmlFor='github'>Github:</label>
                     <input type="text" className="formInput" value={form.github} onChange={(e) => updateForm({ github: e.target.value})} />
                 </div>
-                <div>
+                <div className="formItem">
                     <label htmlFor='linkedIn'>LinkedIn:</label>
                     <input type="text" className="formInput" value={form.linkedIn} onChange={(e) => updateForm({ linkedIn: e.target.value})} />
                 </div>
                 <div>
-                    <input type="submit" value="Create Contact" className="button"/>
+                    <Button type="submit" onClick={(e) => handleClose()}>Create Contact</Button>
+                  
                 </div>
             </form>
             </Box>
