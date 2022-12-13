@@ -57,7 +57,7 @@ export default function Create({getNewContacts}) {
 
         getNewContacts();
         setForm({ name: "", connection: "", email: "", github: "", linkedIn: ""})
-        navigate("/");
+        navigate("/main");
     }
 
     return (
