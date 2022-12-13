@@ -23,6 +23,7 @@ import {
   getAuth,
   signInWithPopup,
   signOut,
+  useAuth
 } from "firebase/auth";
 import {
   getFirestore,
@@ -78,6 +79,7 @@ const logout = () => {
 
 export {
   auth,
+
   db,
   signInWithGoogle,
   logout,

@@ -54,11 +54,11 @@ const Main = () => {
                   <Box>{contact.connection}</Box>
                   </div></form>
                   <form>
-                  <box>
+                  <Box>
                   <a href={contact.email}><AiOutlineMail color="black" fontSize="2em" /></a>
                   <a href={contact.github}><AiFillGithub color="black" fontSize="2em" /></a>
                   <a href={contact.linkedIn}><AiFillLinkedin color="black" fontSize="2em" /></a>
-                  </box>
+                  </Box>
                   
                   </form>
                   <p ><Link to={'/main/' + contact._id}><button>Edit</button></Link></p>

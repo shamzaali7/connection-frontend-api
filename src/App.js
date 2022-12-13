@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import './App.css';
 import Header from './Header'
 import Main from './Main'
@@ -7,6 +7,7 @@ import Footer from './Footer'
 import Nav from './Nav'
 import Login from './Login'
 import Update from'./updateContact'
+import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js";
 
   function App() {
     const [loggedOut, setLoggedOut] = useState(true)
@@ -15,7 +16,7 @@ import Update from'./updateContact'
   return (
     <div className="app"> 
           <Header/>
-            <Router>
+           <main>
             {/* <button>
               <Login onClick={() => setLoggedOut(false)} setLoggedOut={setLoggedOut} exact path="/main"></Login>
               </button> */}
@@ -26,11 +27,38 @@ import Update from'./updateContact'
                   <Route path="/main/:id" element={<Update contact={contact}  />} />
                 </Routes>
                 <Nav/>
-               
+                
               <Footer/>
-            </Router>
+              </main>
     </div>
   );
+}
+function ProtectedRoute(props) {
+ 
+  const { path } = props
+  console.log('path', path)
+  const location = useLocation()
+  console.log('location state', location.state)
+
+  if (
+    path === '/Login' 
+  ) {
+    return auth ? (
+      <Navigate to={location.state?.from ?? '/main'} />
+    ) : (
+      <Route {...props} />
+    )
+  }
+  return auth ? (
+    <Route {...props} />
+  ) : (
+    <Navigate
+      to={{
+        pathname: '/Login',
+        state: { from: path },
+      }}
+    />
+  )
 }
 
 export default App;
