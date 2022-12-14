@@ -11,9 +11,6 @@
 ![Screenshot 2022-12-13 at 8 46 51 PM](https://user-images.githubusercontent.com/114895439/207485548-2fd2177e-4289-4ec1-b320-7cbe51e4f439.png)
 ![Screenshot 2022-12-13 at 8 48 53 PM](https://user-images.githubusercontent.com/114895439/207485781-69cae0ee-2fd3-4610-a219-0cd139ef6ec4.png)
 
-- []()
-- []()
-
 # MVP/PostMVP
 - MVP for this website consists of a useable "compare players" page that allows the user to input two of their preferred players and be redirected to a stats page that provides them with a comparison of the current season averages of the two players.
 
@@ -25,9 +22,8 @@
 - Take that data and output the values of the player requested by the user
 
 ### Post MVP
-- Use another NBA API to grab player ID's
-- Interpolate user ID's in the url of a png website to access player pictures
-- Print pictures of the selected players along with the stats
+- Implement User Auth.
+- Implement a Nav Bar 
 
 ### User Stories
 - As a User I want to see a layout of connections.
