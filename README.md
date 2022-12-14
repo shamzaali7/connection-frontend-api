@@ -27,6 +27,7 @@
 - Contract model contain a schema which has 5 main key value pairs. 
 - contact controller consist of route to find all, create new, delete, and update.
 - index requires cors & contains .env file with URL connecting to MongoDb database.
+
 ### Frontend
 - An app page that connects all components.
 - Contains Routes for all routing within the App. 
@@ -52,15 +53,14 @@
 
 | Components   | Description                                                                                 |
 |------------- |:-------------------------------------------------------------------------------------------:|
-| App          | Contains the main functions and API as well as the Router and its components and the nav bar|
-| Intro        | Shows two form inputs that interact with the user                                           |
-| Main         | Renders multiple stat values of the selected players and their headshots                    |
-| Login        | Provides a set of the current top 20 NBA players                                            |
-| CreateContact| Has a video embedded in the background showing a basketball clip                            |
-| UpdateContact| Retains the title of the webpage that is rendered on all pages                              |
-| myModal      | Retains a rights statement that is rendered on all pages                                    |
-| Header       |
-| Footer       |
+| App          | Contains the main Routing componets with and imported links.|
+| Intro        | The intro /howto of the App.                                           |
+| Main         | Renders the main page setup with the create new and update Contacts.                     |
+| Login        | set up for Google sign in with Firebase along with the layout of the container                                            |
+| CreateContact| Contains the operations to do a fetch call on built api. To create | post a new contact                            |
+| UpdateContact| Contains the operations to do a fetch call on built api. To update | delete a new contact                              |
+| Header       | Contains the Title of the application & have it renders in a banner across the top of app.
+| Footer       | Contains the dev names with links to Github and Linkedin & it renders in a banner across the bottom of app.
 
 # Time Frames
 
