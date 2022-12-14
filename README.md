@@ -1,6 +1,14 @@
 # Project Description
 - We make so may connections but how do we keep up with those connections? How do we remember where we know them from? What if they reach out to us and we don't remember where we know them from? A virtual rolodex could help with that. Everyone has a journey and makes connections along the way but we need a way to professionally maintain those connections. With the connections application we offer a platform with all the benefits of a contact form in addition to how that connection was made.
 
+# Site Map
+
+![Screenshot 2022-12-13 at 9 20 37 PM](https://user-images.githubusercontent.com/114895439/207490970-1b82bd43-517f-4a5c-b30e-58d693dddcc4.png)
+![Screenshot 2022-12-13 at 9 23 23 PM](https://user-images.githubusercontent.com/114895439/207491295-55767cc8-c920-4b14-acbf-41a7a30b40a6.png)
+![Screenshot 2022-12-13 at 9 18 46 PM](https://user-images.githubusercontent.com/114895439/207491368-89d7c38a-2e72-4be9-b351-e7eb27038c1e.png)
+
+
+
 # Project Links
 - [Github FrontEnd Repo](https://github.com/shamzaali7/connection-frontend-api)
 - [Github BackEnd Repo](https://github.com/shamzaali7/connection-backend-api)
