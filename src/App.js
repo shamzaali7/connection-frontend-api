@@ -18,10 +18,6 @@ import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js"
     <div className="app"> 
           <Header/>
            <main>
-            {/* <button>
-              <Login onClick={() => setLoggedOut(false)} setLoggedOut={setLoggedOut} exact path="/main"></Login>
-              </button> */}
-             
                 <Routes>
                   <Route exact path="/" element={<Login />} />
                   <Route exact path="/main" element={<Main />} />
@@ -30,7 +26,7 @@ import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js"
                 </Routes>
                 <Nav/>
                 
-              <Footer/>
+            <Footer/>
               </main>
     </div>
   );

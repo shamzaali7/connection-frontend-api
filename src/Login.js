@@ -8,10 +8,10 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import './Login.css'
 
-//when this is created it will need the following information incorporated
+
 
 const Login = ({ setLoggedOut }) => {
-    //now we have to create some functions for firebase
+  
    
         const [user, loading, error] = useAuthState(auth);
         const [name, setName] = useState("");

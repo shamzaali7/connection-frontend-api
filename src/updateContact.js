@@ -61,8 +61,7 @@ export default function Update({contact}) {
             github: form.github,
             linkedIn: form.linkedIn
           };
-          // const newId = params.id
-          ;
+        
           await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
               method: "PUT",
               headers: {
@@ -138,11 +137,7 @@ export default function Update({contact}) {
                     <br />
               
                     <div className="formItem">
-                        {/* // type= "submit"
-                        // className="formInput"
-                      
-                     
-                        // onChange={(e) => updateForm({ LinkedIn: e.target.value })} */}
+                       
                      <Button onClick= {onSubmit}>Update Contact</Button>
                    
                     </div>
