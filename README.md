@@ -2,12 +2,14 @@
 - We make so may connections but how do we keep up with those connections? How do we remember where we know them from? What if they reach out to us and we don't remember where we know them from? A virtual rolodex could help with that. Everyone has a journey and makes connections along the way but we need a way to professionally maintain those connections. With the connections application we offer a platform with all the benefits of a contact form in addition to how that connection was made.
 
 # Project Links
-- [Github Repo](https://github.com/shamzaali7/nba-stat-comparison)
-- [Deployed Site](https://nba-stat-comparison-gkoi.vercel.app/)
+- [Github FrontEnd Repo](https://github.com/shamzaali7/connection-frontend-api)
+- [Github BackEnd Repo](https://github.com/shamzaali7/connection-backend-api)
+- [Vercel Deploy](https://connection-frontend-api.vercel.app/main)
+- [Heroku Depoy](https://github.com/shamzaali7/connection-backend-api)
 
 # Wireframes & React Component Hierarchy
-- [Wireframes](https://whimsical.com/project-2-basketball-AiSRB8yEHakkXUDv4VLWyn)
-- [React Architecture](src/Assets/ReactComponentHierarchy.jpg)
+- []()
+- []()
 
 # MVP/PostMVP
 - MVP for this website consists of a useable "compare players" page that allows the user to input two of their preferred players and be redirected to a stats page that provides them with a comparison of the current season averages of the two players.
@@ -23,6 +25,13 @@
 - Use another NBA API to grab player ID's
 - Interpolate user ID's in the url of a png website to access player pictures
 - Print pictures of the selected players along with the stats
+
+### User Stories
+- As a User I want to see a layout of connections.
+- As a User I want to be able to add more connections.
+- As a User I want to be able to update my social links.
+- As a User I want to experience a user-friendly application.
+- As a User I want to be able to click on ‘Intro’ button to learn and know how to operate site. 
 
 # Components
 
