@@ -74,3 +74,10 @@ Login {
   font-size: medium;
   font-family:'Courier New', Courier, monospace;
 }
+
+.header-title{
+  text-align: center;
+}
+.header-title h1{
+  text-align: center;
+}
