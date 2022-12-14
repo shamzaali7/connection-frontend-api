@@ -1,250 +1,72 @@
-# Color LS
+# Project Description
+- The function of this app is to allow NBA fans to search for their favorite players and compare their current season stats with other players with a similiar caliber. It is oriented for everyone but is specifically a useful source for people that play fantasy basketball and need updated stats.
 
-[![forthebadge](deployed-with-vercel.svg)](http://forthebadge.com)
-[![forthebadge](deployed-with-heroku.svg)](http://forthebadge.com)
-[![forthebadge](made-with-git.svg)](http://forthebadge.com)
-[![forthebadge](made-with-github.svg)](http://forthebadge.com)
-[![forthebadge](made-with-css.svg)](http://forthebadge.com)
-[![forthebadge](made-with-firebase.svg)](http://forthebadge.com)
-[![forthebadge](made-with-mongo-db.svg)](http://forthebadge.com)
-[![forthebadge](made-with-express.svg)](http://forthebadge.com)
-[![forthebadge](made-with-node.js.svg)](http://forthebadge.com)
-[![forthebadge](made-with-react.svg)](http://forthebadge.com)
+# Project Links
+- [Github Repo](https://github.com/shamzaali7/nba-stat-comparison)
+- [Deployed Site](https://nba-stat-comparison-gkoi.vercel.app/)
 
+# Wireframes & React Component Hierarchy
+- [Wireframes](https://whimsical.com/project-2-basketball-AiSRB8yEHakkXUDv4VLWyn)
+- [React Architecture](src/Assets/ReactComponentHierarchy.jpg)
 
+# MVP/PostMVP
+- MVP for this website consists of a useable "compare players" page that allows the user to input two of their preferred players and be redirected to a stats page that provides them with a comparison of the current season averages of the two players.
 
-[![Gem Version](https://badge.fury.io/rb/colorls.svg)](https://badge.fury.io/rb/colorls)
-[![CI](https://github.com/athityakumar/colorls/actions/workflows/ruby.yml/badge.svg)](https://github.com/athityakumar/colorls/actions/workflows/ruby.yml)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
- 
+- Post MVP is the players list page that provides the users with a current top 20 players list as well as a link to all current NBA players. 
 
-A Ruby script that colorizes the `ls` output with color and icons. Here are the screenshots of working example on an iTerm2 terminal (Mac OS), `oh-my-zsh` with `powerlevel9k` theme and `powerline nerd-font + awesome-config` font with the `Solarized Dark` color theme.
+### MVP
+- Grab information from an NBA API through a fetch request with axios
+- Provide the user with an input field to access the API data
+- Take that data and output the values of the player requested by the user
 
- ![image](https://user-images.githubusercontent.com/17109060/32149040-04f3125c-bd25-11e7-8003-66fd29bc18d4.png)
+### Post MVP
+- Use another NBA API to grab player ID's
+- Interpolate user ID's in the url of a png website to access player pictures
+- Print pictures of the selected players along with the stats
 
-*If you're interested in knowing the powerlevel9k configuration to get this prompt, have a look at [this gist](https://gist.github.com/athityakumar/1bd5e9e24cd2a1891565573a893993eb).*
+# Components
 
-# Table of contents
+| Components  | Description                                                                                 |
+|-------------|:-------------------------------------------------------------------------------------------:|
+| App         | Contains the main functions and API as well as the Router and its components and the nav bar|
+| Fighter     | Shows two form inputs that interact with the user                                           |
+| Stats       | Renders multiple stat values of the selected players and their headshots                    |
+| PlayerList  | Provides a set of the current top 20 NBA players                                            |
+| Home        | Has a video embedded in the background showing a basketball clip                            |
+| Header      | Retains the title of the webpage that is rendered on all pages                              |
+| Footer      | Retains a rights statement that is rendered on all pages                                    |
 
-- [Usage](#usage)
-  - [Flags](#flags)
-    - `-1`
-    - `-a`   (or) `--all`
-    - `-A`   (or) `--almost-all`
-    - `-d`   (or) `--dirs`
-    - `-f`   (or) `--files`
-    - `-h`   (or) `--help`
-    - `-l`   (or) `--long`
-    - `-r`   (or) `--report`
-    - `--tree` (or) `--tree=[DEPTH]`
-    - `--gs` (or) `--git-status`
-    - `--sd` (or) `--sort-dirs` or `--group-directories-first`
-    - `--sf` (or) `--sort-files`
-    - `-t`
-  - [Combination of flags](#combination-of-flags)
-- [Installation](#installation)
-- [Recommended configurations](#recommended-configurations)
-- [Custom configurations](#custom-configurations)
-- [Updating](#updating)
-- [Uninstallation](#uninstallation)
-- [Contributing](#contributing)
-- [License](#license)
+# Time Frames
 
-# Usage
+Component | Priority | Estimated Time | Time Invested | Actual Time
+---- | ---- | ---- | ---- | ----
+Creating Components | H | 1hr | 2hrs | 2hrs   
+Setting up + Initializing API | H | 4hrs | 6hrs | 6hrs
+Making links and lining routes | M | 1hr | 2hrs | 2hrs
+Adding Form and passing its changes | M | 3hrs | 3hrs | 3hrs
+Passing state and updating stats component | H | 2hrs | 3hrs | 3hrs
+Retrieving and implementing new API with separate url | H | 4hrs | 4hrs | 4hrs
+Total | N/A | 15hrs | 20hrs | 20hrs
 
-[(Back to top)](#table-of-contents)
+# Additional Libraries
+- Axios was used to assist the import of API's onto the code
 
-Man pages have been added. Checkout `man colorls`.
+# Code Snippet
+[Personal favorite](src/Assets/Code-Snippet.jpg)
 
-### Flags
+# Issues and Resolutions
 
-- With `-1` : Lists one entry per line
+#### Error: I looked around everywhere for an API that contains NBA player headshots but didn't manage to find any. I came across an article that had a url for nba player headshots based on player ID's but couldnt use that because the NBA api they were using to get the player pictures had a blocked CORS policy. 
+#### Resolution: I searched deep and found an nba api client that could be installed through the terminal. Within that API was player ID's in a json file. With the url from the previous website and the newly obtained ID's, I was finally able to retrieve all of the player headshots.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149062-4f0547ca-bd25-11e7-98b6-587467379704.png)
+#### Error: Cannot read properties of undefined reading State
+#### Resolution: Was supposed to use props (accidental)
 
-- With `-a` (or) `--all` : Does not ignore entries starting with '.'
+#### Error: Cannot read properties of undefined reading PlayerID, Syntax error for calling object wihtin object
+#### Resolution: Had to put brackets and back quotes around the players name which was being interpolated
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149045-182eb39e-bd25-11e7-83d4-897cb14bcff3.png)
+#### Error: {props.playerOneName &&}
+#### Resolution: Replaced playerOneName with a counter to see if a player name was submitted and show a check mark.
 
-- With `-A` (or) `--almost-all` : Does not ignore entries starting with '.', except `./` and `../`
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149046-1ef7664e-bd25-11e7-8bd9-bfc3c8b27b74.png)
-
-- With `-d` (or) `--dirs` : Shows only directories
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149066-5f842aa8-bd25-11e7-9bf0-23313b717182.png)
-
-- With `-f` (or) `--files` : Shows only files
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149065-5a27c9d4-bd25-11e7-9a2b-fd731d76a058.png)
-
-- With `-h` (or) `--help` : Prints a very helpful help menu
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149096-cf2cf5b0-bd25-11e7-84b6-909d79099c98.png)
-
-- With `-l` (or) `--long` : Shows in long listing format
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149049-2a63ae48-bd25-11e7-943c-5ceed25bd693.png)
-
-- With `-r` (or) `--report` : Shows brief report about number of files and folders shown
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149082-96a83fec-bd25-11e7-9081-7f77e4c90e90.png)
-
-- With `--tree` (or) `--tree=[DEPTH]` : Shows tree view of the directory with the specified depth (default 3)
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149051-32e596e4-bd25-11e7-93a9-5e50c8d2bb19.png)
-
-- With `--gs` (or) `--git-status` : Shows git status for each entry
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149075-7a1a1954-bd25-11e7-964e-1adb173aa2b9.png)
-
-- With `--sd` (or) `--sort-dirs` or `--group-directories-first` : Shows directories first, followed by files
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149068-65117fc0-bd25-11e7-8ada-0b055603e3fd.png)
-
-- With `--sf` (or) `--sort-files` : Shows files first, followed by directories
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149071-6b379de4-bd25-11e7-8764-a0c577e526a1.png)
-
-- With `-t` : Sort by modification time, newest first (NEED TO ADD IMAGE)
-
-- With color options : `--light` or `--dark` can be passed as a flag, to choose the appropriate color scheme. By default, the dark color scheme is chosen. In order to tweak any color, read [Custom configurations](#custom-configurations).
-
-### Combination of flags
-
-- Using `--gs` with `-t` :
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149076-8423c864-bd25-11e7-816e-8642643d2c27.png)
-
-- Using `--gs` with `-l` :
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149078-899b0622-bd25-11e7-9810-d398eaa77e32.png)
-
-- Using `--sd` with `-l` and `-A` :
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149084-9eb2a416-bd25-11e7-8fb7-a9d336c6e038.png)
-
-# Installation
-
-[(Back to top)](#table-of-contents)
-
-1. Install Ruby (preferably, version >= 2.6)
-2. [Download](https://www.nerdfonts.com/font-downloads) and install a Nerd Font. Have a look at the [Nerd Font README](https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md) for installation instructions.
-
-    *Note for `iTerm2` users - Please enable the Nerd Font at iTerm2 > Preferences > Profiles > Text > Non-ASCII font > Hack Regular Nerd Font Complete.*
-
-    *Note for `HyperJS` users - Please add `"Hack Nerd Font"` Font as an option to `fontFamily` in your `~/.hyper.js` file.*
-
-3. Install the [colorls](https://rubygems.org/gems/colorls/) ruby gem with `gem install colorls`
-
-    *Note for `rbenv` users - In case of load error when using `lc`, please try the below patch.*
-
-    ```sh
-    rbenv rehash
-    rehash
-    ```
-
-4. Enable tab completion for flags by entering following line to your shell configuration file (`~/.bashrc` or `~/.zshrc`) :
-    ```bash
-    source $(dirname $(gem which colorls))/tab_complete.sh
-    ```
-
-5. Start using `colorls` :tada:
-
-6. Have a look at [Recommended configurations](#recommended-configurations) and [Custom configurations](#custom-configurations).
-
-# Recommended configurations
-
-[(Back to top)](#table-of-contents)
-
-1. To add some short command (say, `lc`) with some flag options (say, `-l`, `-A`, `--sd`) by default, add this to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.) :
-    ```sh
-    alias lc='colorls -lA --sd'
-    ```
-
-2. For changing the icon(s) to other unicode icons of choice (select icons from [here](https://nerdfonts.com/)), change the YAML files in a text editor of your choice (say, `subl`)
-
-    ```sh
-    subl $(dirname $(gem which colorls))/yaml
-    ```
-
-# Custom configurations
-
-[(Back to top)](#table-of-contents)
-
-You can overwrite the existing icons and colors mapping by copying the yaml files from `$(dirname $(gem which colorls))/yaml` into `~/.config/colorls`, and changing them.
-
-- To overwrite color mapping :
-
-  Please have a look at the [list of supported color names](https://github.com/sickill/rainbow#color-list). You may also use a color hex code as long as it is quoted within the YAML file and prefaced with a `#` symbol.
-
-  Let's say that you're using the dark color scheme and would like to change the color of untracked file (`??`) in the `--git-status` flag to yellow. Copy the defaut `dark_colors.yaml` and change it.
-
-  ```sh
-  cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml
-  ```
-
-  In the `~/.config/colorls/dark_colors.yaml` file, change the color set for `untracked` from `darkorange` to `yellow`, and save the change.
-
-  ```
-  untracked: yellow
-  ```
-
-  Or, using hex color codes:
-
-  ```
-  untracked: '#FFFF00'
-  ```
-
-- To overwrite icon mapping :
-
-  Please have a look at the [list of supported icons](https://nerdfonts.com/). Let's say you want to add an icon for swift files. Copy the default `files.yaml` and change it.
-
-  ```sh
-  cp $(dirname $(gem which colorls))/yaml/files.yaml ~/.config/colorls/files.yaml`
-  ```
-
-  In the `~/.config/colorls/files.yaml` file, add a new icon / change an existing icon, and save the change.
-
-
-  ```
-  swift: "\uF179"
-  ```
-
-- User contributed alias configurations :
-
-  - [@rjhilgefort](https://gist.github.com/rjhilgefort/51ea47dd91bcd90cd6d9b3b199188c16)
-
-
-# Updating
-
-[(Back to top)](#table-of-contents)
-
-Want to update to the latest version of `colorls`?
-
-```sh
-gem update colorls
-```
-
-# Uninstallation
-
-[(Back to top)](#table-of-contents)
-
-Want to uninstall and revert back to the old style? No issues (sob). Please feel free to open an issue regarding how we can enhance `colorls`.
-
-```sh
-gem uninstall colorls
-```
-
-# Contributing
-
-[(Back to top)](#table-of-contents)
-
-Your contributions are always welcome! Please have a look at the [contribution guidelines](CONTRIBUTING.md) first. :tada:
-
-# License
-
-[(Back to top)](#table-of-contents)
-
-
-The MIT License (MIT) 2017 - [Athitya Kumar](https://github.com/athityakumar/). Please have a look at the [LICENSE.md](LICENSE.md) for more details.
+# Youtube link
+[Click Here](https://www.youtube.com/watch?v=3N7PBuEtg9w&ab_channel=HamzaAli)
