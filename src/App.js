@@ -7,6 +7,7 @@ import Footer from './Footer'
 import Nav from './Nav'
 import Login from './Login'
 import Update from'./updateContact'
+import Intro from './Intro'
 import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js";
 
   function App() {
@@ -25,6 +26,7 @@ import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js"
                   <Route exact path="/" element={<Login />} />
                   <Route exact path="/main" element={<Main />} />
                   <Route path="/main/:id" element={<Update contact={contact}  />} />
+                  <Route exact path ="/Intro" element= {<Intro />}/>
                 </Routes>
                 <Nav/>
                 

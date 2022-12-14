@@ -15,9 +15,19 @@
 
 }
 .Intro {
-  background-color: rgb(4, 5, 5);
-  display: flex;
-  align-items: flex-end;
+
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  padding-top: 15px;
+}
+
+.introText {
+  font-size: medium;
+
+}
+.instructions {
+  font-size: medium;
+  line-height: 1.5;
 }
 
 
