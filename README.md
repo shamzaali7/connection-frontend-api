@@ -19,15 +19,23 @@
 ![Screenshot 2022-12-13 at 8 46 51 PM](https://user-images.githubusercontent.com/114895439/207485548-2fd2177e-4289-4ec1-b320-7cbe51e4f439.png)
 ![Screenshot 2022-12-13 at 8 48 53 PM](https://user-images.githubusercontent.com/114895439/207485781-69cae0ee-2fd3-4610-a219-0cd139ef6ec4.png)
 
-# MVP/PostMVP
-- MVP for this website consists of a useable "compare players" page that allows the user to input two of their preferred players and be redirected to a stats page that provides them with a comparison of the current season averages of the two players.
-
-- Post MVP is the players list page that provides the users with a current top 20 players list as well as a link to all current NBA players. 
 
 ### MVP
-- Grab information from an NBA API through a fetch request with axios
-- Provide the user with an input field to access the API data
-- Take that data and output the values of the player requested by the user
+- A frontend and backend that are in unison.
+### Backend
+- Making components [index, connections, seed.js, seed.json., contactModel, contactController].
+- Contract model contain a schema which has 5 main key value pairs. 
+- contact controller consist of route to find all, create new, delete, and update.
+- index requires cors & contains .env file with URL connecting to MongoDb database.
+### Frontend
+- An app page that connects all components.
+- Contains Routes for all routing within the App. 
+- Consist of compments for creating, getting, updating, and deleting the contacts.
+- Sending request to the deployed backend to to receive a desirable output that will be displayed. 
+- A css file that allows the app to be used on all screen displays.
+- A friendly Ui experience with interactive components
+- An About link for users to receive an intro on the Application.
+- Header and Footer. 
 
 ### Post MVP
 - Implement User Auth.
