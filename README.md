@@ -54,7 +54,7 @@
 | Components   | Description                                                                                 |
 |------------- |:-------------------------------------------------------------------------------------------:|
 | App          | Contains the main Routing componets with and imported links.|
-| Intro        | The intro /howto of the App.                                           |
+| Intro        | The intro / how-to of the App.                                           |
 | Main         | Renders the main page setup with the create new and update Contacts.                     |
 | Login        | set up for Google sign in with Firebase along with the layout of the container                                            |
 | CreateContact| Contains the operations to do a fetch call on built api. To create | post a new contact                            |
