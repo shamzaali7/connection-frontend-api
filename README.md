@@ -8,6 +8,9 @@
 - [Heroku Depoy](https://github.com/shamzaali7/connection-backend-api)
 
 # Wireframes & React Component Hierarchy
+![Screenshot 2022-12-13 at 8 46 51 PM](https://user-images.githubusercontent.com/114895439/207485548-2fd2177e-4289-4ec1-b320-7cbe51e4f439.png)
+![Screenshot 2022-12-13 at 8 48 53 PM](https://user-images.githubusercontent.com/114895439/207485781-69cae0ee-2fd3-4610-a219-0cd139ef6ec4.png)
+
 - []()
 - []()
 
