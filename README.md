@@ -1,5 +1,5 @@
 # Project Description
-- The function of this app is to allow NBA fans to search for their favorite players and compare their current season stats with other players with a similiar caliber. It is oriented for everyone but is specifically a useful source for people that play fantasy basketball and need updated stats.
+- We make so may connections but how do we keep up with those connections? How do we remember where we know them from? What if they reach out to us and we don't remember where we know them from? A virtual rolodex could help with that. Everyone has a journey and makes connections along the way but we need a way to professionally maintain those connections. With the connections application we offer a platform with all the benefits of a contact form in addition to how that connection was made.
 
 # Project Links
 - [Github Repo](https://github.com/shamzaali7/nba-stat-comparison)
