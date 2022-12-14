@@ -42,15 +42,17 @@
 
 # Components
 
-| Components  | Description                                                                                 |
-|-------------|:-------------------------------------------------------------------------------------------:|
-| App         | Contains the main functions and API as well as the Router and its components and the nav bar|
-| Fighter     | Shows two form inputs that interact with the user                                           |
-| Stats       | Renders multiple stat values of the selected players and their headshots                    |
-| PlayerList  | Provides a set of the current top 20 NBA players                                            |
-| Home        | Has a video embedded in the background showing a basketball clip                            |
-| Header      | Retains the title of the webpage that is rendered on all pages                              |
-| Footer      | Retains a rights statement that is rendered on all pages                                    |
+| Components   | Description                                                                                 |
+|------------- |:-------------------------------------------------------------------------------------------:|
+| App          | Contains the main functions and API as well as the Router and its components and the nav bar|
+| Intro        | Shows two form inputs that interact with the user                                           |
+| Main         | Renders multiple stat values of the selected players and their headshots                    |
+| Login        | Provides a set of the current top 20 NBA players                                            |
+| CreateContact| Has a video embedded in the background showing a basketball clip                            |
+| UpdateContact| Retains the title of the webpage that is rendered on all pages                              |
+| myModal      | Retains a rights statement that is rendered on all pages                                    |
+| Header       |
+| Footer       |
 
 # Time Frames
 
