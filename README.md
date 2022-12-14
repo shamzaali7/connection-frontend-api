@@ -1,13 +1,22 @@
 # Color LS
 
-[![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](deployed-with-vercel.svg)](http://forthebadge.com)
+[![forthebadge](deployed-with-heroku.svg)](http://forthebadge.com)
+[![forthebadge](made-with-git.svg)](http://forthebadge.com)
+[![forthebadge](made-with-github.svg)](http://forthebadge.com)
+[![forthebadge](made-with-css.svg)](http://forthebadge.com)
+[![forthebadge](made-with-firebase.svg)](http://forthebadge.com)
+[![forthebadge](made-with-mongo-db.svg)](http://forthebadge.com)
+[![forthebadge](made-with-express.svg)](http://forthebadge.com)
+[![forthebadge](made-with-node.js.svg)](http://forthebadge.com)
+[![forthebadge](made-with-react.svg)](http://forthebadge.com)
+
+
 
 [![Gem Version](https://badge.fury.io/rb/colorls.svg)](https://badge.fury.io/rb/colorls)
 [![CI](https://github.com/athityakumar/colorls/actions/workflows/ruby.yml/badge.svg)](https://github.com/athityakumar/colorls/actions/workflows/ruby.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
-
-REACT NODE.JS EXPRESS MONGODB HEROKU/VERCELE FIREBASE JAVASCRIPT CSS GITHUB GIT 
+ 
 
 A Ruby script that colorizes the `ls` output with color and icons. Here are the screenshots of working example on an iTerm2 terminal (Mac OS), `oh-my-zsh` with `powerlevel9k` theme and `powerline nerd-font + awesome-config` font with the `Solarized Dark` color theme.
 
