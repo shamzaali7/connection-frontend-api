@@ -66,30 +66,26 @@
 
 Component | Priority | Estimated Time | Time Invested | Actual Time
 ---- | ---- | ---- | ---- | ----
-Creating Components | H | 1hr | 2hrs | 2hrs   
-Setting up + Initializing API | H | 4hrs | 6hrs | 6hrs
-Making links and lining routes | M | 1hr | 2hrs | 2hrs
-Adding Form and passing its changes | M | 3hrs | 3hrs | 3hrs
-Passing state and updating stats component | H | 2hrs | 3hrs | 3hrs
-Retrieving and implementing new API with separate url | H | 4hrs | 4hrs | 4hrs
-Total | N/A | 15hrs | 20hrs | 20hrs
+Creating Components | H | 2hr | 3hrs | 3hrs   
+Setting up + Initializing API | H | 8hrs | 10hrs | 10hrs
+Making links and lining routes- | M | 4hr | 5hrs | 5hrs
+Adding Form and passing its changes/Connecting fronend to backend | M | 6hrs | 7hrs | 7hrs
+Passing states/ propts and updating component | H | 6hrs | 7hrs | 7hrs
+Retrieving and implementing new API with separate url | H | 6hrs | 7hrs | 7hrs
+Total | N/A | 32hrs | 39hrs | 39hrs
 
 # Additional Libraries
-- Axios was used to assist the import of API's onto the code
-
-# Code Snippet
-[Personal favorite](src/Assets/Code-Snippet.jpg)
+- Axios was used to assist the import of API's onto the code.
 
 # Issues and Resolutions
 
-#### Error: I looked around everywhere for an API that contains NBA player headshots but didn't manage to find any. I came across an article that had a url for nba player headshots based on player ID's but couldnt use that because the NBA api they were using to get the player pictures had a blocked CORS policy. 
-#### Resolution: I searched deep and found an nba api client that could be installed through the terminal. Within that API was player ID's in a json file. With the url from the previous website and the newly obtained ID's, I was finally able to retrieve all of the player headshots.
+#### Error: Access-Control-Allow-Origin-header missing-also blocked by cors 
+#### Resolution: Issue was receiving the api call from frontend due to use params being used but not funtional.
 
-#### Error: Cannot read properties of undefined reading State
-#### Resolution: Was supposed to use props (accidental)
+#### Error: Creating a contact
+#### Resolution: we were creating it but the data wasnt rendering on the screen. We had to do another get request (axios)
 
-#### Error: Cannot read properties of undefined reading PlayerID, Syntax error for calling object wihtin object
-#### Resolution: Had to put brackets and back quotes around the players name which was being interpolated
+<!-- #### Error: 
+#### Resolution:  -->
 
-#### Error: {props.playerOneName &&}
-#### Resolution: Replaced playerOneName with a counter to see if a player name was submitted and show a check mark.
+
