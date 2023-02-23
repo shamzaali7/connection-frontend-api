@@ -19,71 +19,68 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
-  GoogleAuthProvider,
-  getAuth,
-  signInWithPopup,
-  signOut,
-  useAuth
+  getAuth
 } from "firebase/auth";
-import {
-  getFirestore,
-  query,
-  getDocs,
-  collection,
-  where,
-  addDoc,
-} from "firebase/firestore";
+// import {
+//   getFirestore,
+//   query,
+//   getDocs,
+//   collection,
+//   where,
+//   addDoc,
+// } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBnQJ5e_PdDGXw_doCp3dW-UnjlSu4wOds",
-    authDomain: "connections-group.firebaseapp.com",
-    projectId: "connections-group",
-    storageBucket: "connections-group.appspot.com",
-    messagingSenderId: "580383101801",
-    appId: "1:580383101801:web:389585bbdc7f86ee8ea3f8",
-    measurementId: "G-RTHPVT8VWK"
-  };
+ apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: "our-connections.firebaseapp.com",
+  projectId: "our-connections",
+  storageBucket: "our-connections.appspot.com",
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_M_ID
+};
 //   now write this code 
  
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+export const auth = getAuth(app);
+export default app
 
-const googleProvider = new GoogleAuthProvider();
+// const googleProvider = new GoogleAuthProvider();
 
-const signInWithGoogle = async () => {
-  try {
-    const res = await signInWithPopup(auth, googleProvider);
-    const user = res.user;
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
-    const docs = await getDocs(q);
-    if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
-        uid: user.uid,
-        name: user.displayName,
-        authProvider: "google",
-        email: user.email,
-      });
+// const signInWithGoogle = async () => {
+//   try {
+//     const res = await signInWithPopup(auth, googleProvider);
+//     const user = res.user;
+//     const q = query(collection(db, "users"), where("uid", "==", user.uid));
+//     const docs = await getDocs(q);
+//     if (docs.docs.length === 0) {
+//       await addDoc(collection(db, "users"), {
+//         uid: user.uid,
+//         name: user.displayName,
+//         authProvider: "google",
+//         email: user.email,
+//       });
      
-    }
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
+//     }
+    
+//   } catch (err) {
+//     console.error(err);
+//     alert(err.message);
+//   }
+// };
 
-const logout = () => {
-  signOut(auth);
-};
+// const logout = () => {
+//   signOut(auth);
+// };
 
-export {
-  auth,
+// export {
+//   auth,
 
-  db,
-  signInWithGoogle,
-  logout,
-};
+//   db,
+//   signInWithGoogle,
+//   logout,
+// };
 
 //   Now go back to you firebase main screen and click on authentication
 // click on sign in method

@@ -8,55 +8,49 @@ import Nav from './Nav'
 import Login from './Login'
 import Update from'./updateContact'
 import Intro from './Intro'
-import { auth, signInWithGoogle, db, logout } from "./Firebase-Config/config.js";
+import Signup from './Signup'
+
+import { AuthContextProvider } from "./Firebase-Config/AuthContext";
+import ProtectedRoute from "./ProtectedRoute";
+import Account from './Account'
 
   function App() {
-    const [loggedOut, setLoggedOut] = useState(true)
-   const [contact, setContact] = useState([])
+  //   const [loggedOut, setLoggedOut] = useState(true)
+  //  const [contact, setContact] = useState([])
     
   return (
-    <div className="app"> 
-          <Header/>
-           <main>
-                <Routes>
-                  <Route exact path="/" element={<Login />} />
-                  <Route exact path="/main" element={<Main />} />
-                  <Route path="/main/:id" element={<Update contact={contact}  />} />
-                  <Route exact path ="/Intro" element= {<Intro />}/>
-                </Routes>
-                <Nav/>
-                
-            <Footer/>
-              </main>
+    <div className="app">
+      <main>
+        <Header />
+        <AuthContextProvider>
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route
+              exact
+              path="/main/"
+              element={
+                <ProtectedRoute>
+                  <Main />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/main/:id"
+              element={
+                <ProtectedRoute>
+                  <Update />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route exact path="/Intro" element={<Intro />} />
+          </Routes>
+          <Nav />
+        </AuthContextProvider>
+        <Footer />
+      </main>
     </div>
   );
 }
-function ProtectedRoute(props) {
- 
-  const { path } = props
-  console.log('path', path)
-  const location = useLocation()
-  console.log('location state', location.state)
-
-  if (
-    path === '/Login' 
-  ) {
-    return auth ? (
-      <Navigate to={location.state?.from ?? '/main'} />
-    ) : (
-      <Route {...props} />
-    )
-  }
-  return auth ? (
-    <Route {...props} />
-  ) : (
-    <Navigate
-      to={{
-        pathname: '/Login',
-        state: { from: path },
-      }}
-    />
-  )
-}
-
-export default App;
+export default App
