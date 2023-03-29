@@ -17,7 +17,7 @@ const Signup = () => {
       navigate("/main/");
     } catch (e) {
       setError(e.message);
-      console.log(e.message);
+     
     }
   };
 
@@ -27,9 +27,10 @@ const Signup = () => {
         <h1 className="text-2xl font-bold py-2">Sign up for a free account</h1>
         <p className="py-2">
           Already have an account?{" "}
-          <Link to="/" className="underline">
-            <button>Sign in.</button>
-           
+          <Link to="/">
+            <button className="bg-indigo-200 text-blue-600 text-sm hover:bg-indigo-500 hover:text-black leading-6 font-medium py-2 px-3 rounded-lg">
+              Sign in
+            </button>
           </Link>
         </p>
       </div>
@@ -50,7 +51,7 @@ const Signup = () => {
             type="password"
           />
         </div>
-        <button className="border border-blue-500 bg-blue-600 hover:bg-blue-500 w-full p-4 my-2 text-white">
+        <button className="border border-blue-500 bg-blue-600 hover:bg-indigo-500 w-full p-4 hover:text-black my-2 rounded-lg text-white">
           Sign Up
         </button>
       </form>

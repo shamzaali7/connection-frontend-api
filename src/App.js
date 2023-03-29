@@ -13,6 +13,7 @@ import Signup from './Signup'
 import { AuthContextProvider } from "./Firebase-Config/AuthContext";
 import ProtectedRoute from "./ProtectedRoute";
 import Account from './Account'
+import ProtectedNav from './ProtectedNav'
 
   function App() {
     const [loggedOut, setLoggedOut] = useState(true)
@@ -23,9 +24,11 @@ import Account from './Account'
       <main>
         <Header />
         <AuthContextProvider>
+       
           <Routes>
             <Route exact path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+
             <Route
               exact
               path="/main/"
@@ -35,19 +38,14 @@ import Account from './Account'
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="/main/:id"
-              element={
-              
-                  <Update />
-               
-              }
-            />
+          
+            
+            <Route path="/main/:id" element={<Update />} />
 
             <Route exact path="/Intro" element={<Intro />} />
           </Routes>
-          <Nav />
         </AuthContextProvider>
+
         <Footer />
       </main>
     </div>

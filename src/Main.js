@@ -12,6 +12,7 @@ import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "./Firebase-Config/AuthContext";
+import Nav from './Nav'
 
 const Main = () => {
   const { user, logout } = UserAuth();
@@ -49,6 +50,7 @@ const Main = () => {
 
       return (
         <div className="postItBoard">
+          <Nav/>
           <div className="postIt">
             <button>
               <Create getNewContacts={getNewContacts} />

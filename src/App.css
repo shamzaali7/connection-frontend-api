@@ -10,6 +10,9 @@
   justify-content: center;
   background: rgba(49, 49, 54, 0.993);
   color: rgb(190, 190, 190);
+  font-size: 40px;;
+
+  height: 10vh
 }
 
 .Intro {

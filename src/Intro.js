@@ -1,9 +1,11 @@
 import React from 'react'
 import './App.css'
+import Nav from './Nav'
 
 const Intro = () => {
   return (
     <div className="Intro" id='#about'>
+      <Nav/>
        <div className='introText'>
         <p>We make so may connections but how do we keep up with those connections?<br/>
         How do we remember where we know them from?<br/> What if they reach out to us and we don't remember where we know them from? <br/>
