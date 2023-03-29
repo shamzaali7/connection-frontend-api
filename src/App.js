@@ -24,7 +24,6 @@ import ProtectedNav from './ProtectedNav'
       <main>
         <Header />
         <AuthContextProvider>
-       
           <Routes>
             <Route exact path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
@@ -38,9 +37,8 @@ import ProtectedNav from './ProtectedNav'
                 </ProtectedRoute>
               }
             />
-          
-            
-            <Route path="/main/:id" element={<Update />} />
+
+            <Route path="/main/:id" element={<Update contact={contact} />} />
 
             <Route exact path="/Intro" element={<Intro />} />
           </Routes>
