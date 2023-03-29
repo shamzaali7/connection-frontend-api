@@ -15,8 +15,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import Account from './Account'
 
   function App() {
-  //   const [loggedOut, setLoggedOut] = useState(true)
-  //  const [contact, setContact] = useState([])
+    const [loggedOut, setLoggedOut] = useState(true)
+   const [contact, setContact] = useState([])
     
   return (
     <div className="app">
@@ -38,9 +38,9 @@ import Account from './Account'
             <Route
               path="/main/:id"
               element={
-                <ProtectedRoute>
+              
                   <Update />
-                </ProtectedRoute>
+               
               }
             />
 

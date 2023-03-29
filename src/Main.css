@@ -106,7 +106,8 @@ box{
 .form-item {
     font-size: medium;
     font-family:'Courier New', Courier, monospace;
-    
+    border-color: black solid;
+    border-radius: 2px;
 }
 .edit-button-container{
     display: flex;

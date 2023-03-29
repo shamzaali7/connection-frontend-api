@@ -86,7 +86,7 @@ export default function Update({contact}) {
                     
                     <div className="formItem">
                       <label>Name: </label>
-                      <input type="text" className="formInput" id="name" value={form.name}
+                        <input  type="text" className="formInput" id="name"  value={form.name}
                         onChange={(e) => updateForm({ name: e.target.value })} />
                     </div>
                     
