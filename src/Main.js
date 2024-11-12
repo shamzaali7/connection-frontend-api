@@ -31,7 +31,7 @@ const Main = () => {
   const [loading, setLoading] = useState(false)
   const getContacts = {
      method: 'GET',
-     url: 'https://connection-backend-api.herokuapp.com/api/contact'
+     url: 'https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact'
   }
 
   useEffect(()=> {

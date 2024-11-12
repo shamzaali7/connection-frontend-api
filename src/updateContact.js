@@ -41,7 +41,7 @@ export default function Update({contact}) {
 
     async function handleDelete (e) {
       e.preventDefault()
-      await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
+      await fetch(`https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact`, {
          method: "DELETE",
          headers: {
            'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ export default function Update({contact}) {
             linkedIn: form.linkedIn
           };
         
-          await fetch(`https://connection-backend-api.herokuapp.com/api/contact`, {
+          await fetch(`https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact`, {
               method: "PUT",
               headers: {
                 'Content-Type': 'application/json',

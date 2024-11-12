@@ -42,7 +42,7 @@ export default function Create({getNewContacts}) {
 
         const newContact = {...form};
 
-        await fetch("https://connection-backend-api.herokuapp.com/api/contact/", {
+        await fetch("https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
